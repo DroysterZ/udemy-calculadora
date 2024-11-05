@@ -1,5 +1,10 @@
 <?php
-if (count($_POST) && isset($_POST["op"])) {
+if (
+	count($_POST)
+	&& isset($_POST["op"])
+	&& is_numeric($_POST["n1"])
+	&& is_numeric($_POST["n2"])
+) {
 	switch ($_POST["op"]) {
 		case "soma":
 			$res = $_POST["n1"] + $_POST["n2"];
